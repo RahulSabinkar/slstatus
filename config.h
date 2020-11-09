@@ -67,8 +67,8 @@ static const struct arg args[] = {
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
     //{ netspeed_rx, "%sB/s  ", "enp0s3" },
     //{ run_command, " 📦 %s ",     "checkupdates | wc -l" },
-	{ run_command, " 🔊%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ run_command, " %4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	//{ cpu_perc, "| CPU %s%% ", NULL	      },
 	//{ ram_used, "| RAM %s ", NULL	      },
-	{ datetime, "%s",           "|📆%a %b %d-%m-%y 🕒%T" },
+	{ datetime, "%s",           "|  %a %b %d-%m-%y  %T" },
 };
