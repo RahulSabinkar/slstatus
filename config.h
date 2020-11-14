@@ -65,9 +65,12 @@ static const struct arg args[] = {
 	/* function format          argument */
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
-    { netspeed_rx, "%sB/s |", "enp1s0" },
+    { netspeed_rx, "  %sB/s |", "enp1s0" },
     //{ run_command, " 📦 %s ",     "checkupdates | wc -l" },
 	//{ run_command, " 墳%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+    // /dev/mixer is an ancient interface. To enable it, you have to load the snd_pcm_oss module;
+    // I believe that this module is available on the default Arch kernel. Add 'snd_pcm_oss' to your
+    // /etc/modules-load.d/modules.conf file, and on rebooting /dev/mixer should show up.
     { vol_perc,    " 墳 %s ", "/dev/mixer"},
     //{ cpu_perc, "|CPU %s%%", NULL	      },
     //{ ram_used, "|RAM %s", NULL	      },
